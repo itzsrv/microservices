@@ -1,0 +1,21 @@
+server:
+  port: 8888
+spring:
+  security:
+    user:
+      name: microservice
+      password: microservice
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/itzsrv/democonfig-app-tolls
+          search-paths:
+          - station*
+          repos:
+            perf: 
+              pattern: '*/perf'
+              uri: https://github.com/itzsrv/democonfig-app-tolls-perf
+              search-paths:
+              - 'station*'
+
